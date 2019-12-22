@@ -299,6 +299,14 @@ const routeConfiguration = () => {
       name: 'NotFoundPage',
       component: props => <NotFoundPage {...props} />,
     },
+    
+    {
+      path: '/test',
+      name: 'TestPage',
+      component: AboutPage,
+    },
+    
+    
 
     // Do not change this path!
     //
