@@ -23,6 +23,8 @@ import {
   StyleguidePage,
   TermsOfServicePage,
   TransactionPage,
+  
+  TestPage,
 } from './containers';
 
 // routeConfiguration needs to initialize containers first
@@ -303,7 +305,7 @@ const routeConfiguration = () => {
     {
       path: '/test',
       name: 'TestPage',
-      component: AboutPage,
+      component: props => <TestPage{...props} />,
     },
     
     

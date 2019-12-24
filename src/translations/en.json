@@ -229,6 +229,7 @@
   "EditListingWizard.tabLabelPhotos": "Photos",
   "EditListingWizard.tabLabelPolicy": "Sauna rules",
   "EditListingWizard.tabLabelPricing": "Pricing",
+  "EditListingWizard.tabLabelCapacity": "Capacity",
   "EmailVerificationForm.finishAccountSetup": "We will need to send you email notifications. To allow this, please verify your email address {email}.",
   "EmailVerificationForm.successButtonText": "Continue exploring",
   "EmailVerificationForm.successText": "Everything looks good. Time to get out there – have a great day.",

@@ -58,6 +58,7 @@ export class SearchPageComponent extends Component {
       priceFilterConfig,
       dateRangeFilterConfig,
       keywordFilterConfig,
+      capacityOptions,
     } = this.props;
 
     // Note: "category" and "amenities" filters are not actually filtering anything by default.
@@ -85,6 +86,10 @@ export class SearchPageComponent extends Component {
       keywordFilter: {
         paramName: 'keywords',
         config: keywordFilterConfig,
+      },
+      capacityFilter: {
+        paramName: 'pub_capacity',
+        options: capacityOptions,
       },
     };
   }
@@ -232,6 +237,9 @@ export class SearchPageComponent extends Component {
               dateRangeFilter: filters.dateRangeFilter,
               keywordFilter: filters.keywordFilter,
             }}
+            secondaryFilters={{
+              capacityFilter: filters.capacityFilter,
+            }}
           />
           <ModalInMobile
             className={css.mapPanel}
@@ -279,6 +287,9 @@ SearchPageComponent.defaultProps = {
   priceFilterConfig: config.custom.priceFilterConfig,
   dateRangeFilterConfig: config.custom.dateRangeFilterConfig,
   keywordFilterConfig: config.custom.keywordFilterConfig,
+
+  capacityOptions: config.custom.capacityOptions,
+
   activeListingId: null,
 };
 
@@ -302,6 +313,9 @@ SearchPageComponent.propTypes = {
     step: number.isRequired,
   }),
   dateRangeFilterConfig: shape({ active: bool.isRequired }),
+
+  capacityOptions: array,
+
 
   // from withRouter
   history: shape({
