@@ -316,7 +316,6 @@ SearchPageComponent.propTypes = {
 
   capacityOptions: array,
 
-
   // from withRouter
   history: shape({
     push: func.isRequired,
@@ -386,6 +385,8 @@ SearchPage.loadData = (params, search) => {
   });
   const { page = 1, address, origin, ...rest } = queryParams;
   const originMaybe = config.sortSearchByDistance && origin ? { origin } : {};
+
+  console.log("loadData");
   return searchListings({
     ...rest,
     ...originMaybe,

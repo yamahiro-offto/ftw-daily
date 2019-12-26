@@ -119,6 +119,8 @@ export const searchMapListingsError = e => ({
 });
 
 export const searchListings = searchParams => (dispatch, getState, sdk) => {
+  console.log("sdk");
+  console.log(sdk);
   dispatch(searchListingsRequest(searchParams));
 
   const priceSearchParams = priceParam => {
